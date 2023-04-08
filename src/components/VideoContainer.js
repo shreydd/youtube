@@ -20,15 +20,19 @@ const VideoContainer = () => {
 
     return (
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 px-5'>
-            {
-                videos.map(video => {
-                    return (
-                        <Link to={'/watch?v='+video.id} key={video.id} className='hover:shadow-lg'>
-                            <VideoCard info={video} />
-                        </Link>
-                    )
+            {   
+                videos.length == 0 
+                    ?
+                    <p>loading</p>
+                    :
+                    videos.map(video => {
+                        return (
+                            <Link to={'/watch?v='+video.id} key={video.id} className='hover:shadow-lg'>
+                                <VideoCard info={video} />
+                            </Link>
+                        )
 
-                })
+                    })
             }
         </div>
     )
