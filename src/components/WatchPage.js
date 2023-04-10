@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSearchParams } from 'react-router-dom';
 import { closeMenu } from '../utils/appSlice';
-import { YOUTUBE_COMMENTS_API, YOUTUBE_SEARCH_RESULTS_REMAINING_CONFIG } from '../utils/constants';
+import { YOUTUBE_COMMENTS_API, YOUTUBE_REMAINING_CONFIG } from '../utils/constants';
 import CommentReply from './CommentReply';
 import VideoComment from './VideoComment';
 
@@ -16,9 +16,9 @@ const WatchPage = () => {
 
     // get comments
     const getComments = async () => {
-        const data = await fetch(YOUTUBE_COMMENTS_API + searchParams.get("v") + YOUTUBE_SEARCH_RESULTS_REMAINING_CONFIG)
+        const data = await fetch(YOUTUBE_COMMENTS_API + searchParams.get("v") + YOUTUBE_REMAINING_CONFIG)
         const json = await data.json()
-        console.log(json?.items)
+        // console.log(json?.items)
         setVideoComments(json?.items);
     }
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { YOUTUBE_SEARCH_RESULTS_KEYWORD, YOUTUBE_SEARCH_RESULTS_REMAINING_CONFIG } from '../utils/constants';
+import { YOUTUBE_SEARCH_RESULTS_KEYWORD, YOUTUBE_REMAINING_CONFIG } from '../utils/constants';
 import VideoCard from './VideoCard';
 
 const SearchResults = () => {
@@ -15,7 +15,7 @@ const SearchResults = () => {
     }, [searchParams])
 
     const getSearchResults = async () => {
-        const data = await fetch(YOUTUBE_SEARCH_RESULTS_KEYWORD + searchParams.get('search_query') + YOUTUBE_SEARCH_RESULTS_REMAINING_CONFIG)
+        const data = await fetch(YOUTUBE_SEARCH_RESULTS_KEYWORD + searchParams.get('search_query') + YOUTUBE_REMAINING_CONFIG)
         const json = await data.json();
 
         console.log(json.items)

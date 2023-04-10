@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
 import { toggleMenu } from '../utils/appSlice';
-import { YOUTUBE_SEARCH_API, YOUTUBE_SEARCH_RESULTS_REMAINING_CONFIG } from '../utils/constants';
+import { YOUTUBE_SEARCH_API } from '../utils/constants';
 import { storeSuggestions } from '../utils/searchSlice';
 
 const Header = () => {
@@ -40,7 +40,7 @@ const Header = () => {
         const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
         const json = await data.json();
         setSuggestions(json[1])
-        console.log('API call -', json[1])
+        // console.log('API call -', json[1])
 
         // update data in the store
         dispatch(
@@ -92,7 +92,7 @@ const Header = () => {
                 {(suggestBoxFocus || inputBoxFocus) && (<div className='absolute w-1/3 bg-white rounded-lg mt-[0.1rem] grid-flow-col shadow-lg'>
                     <ul>
                         {
-                            suggestions.map(item => {
+                            suggestions?.map(item => {
                                 return (
                                     <li
                                         key={item}

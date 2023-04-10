@@ -2,6 +2,7 @@ import React from 'react'
 
 const CommentReply = ({ item }) => {
     const replies = item?.replies?.comments
+    
     return (
         replies?.map(reply => {
             return (<div className='pb-5 flex items-center pl-5 md:ml-5 border-l-2 border-black' key={reply?.id}>
