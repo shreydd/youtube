@@ -28,11 +28,11 @@ const SearchResults = () => {
                 <h3 className='text-2xl mb-3 px-5 py-3'>Top results:</h3>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 px-5'>
                     {
-                        resultsList.length == 0
+                        resultsList?.length == 0
                             ?
                             <div>Loading</div>
                             :
-                            resultsList.map(item => {
+                            resultsList?.map(item => {
                                 return (
                                     item?.id?.videoId &&
                                     <Link to={'/watch?v='+item?.id?.videoId}>
