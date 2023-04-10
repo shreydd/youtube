@@ -11,7 +11,9 @@ const VideoCard = ({ info }) => {
             <ul className='p-2'>
                 <li className='font-bold mb-1 text-base'>{title}</li>
                 <li className='text-gray-600'>{channelTitle}</li>
-                <li className='text-gray-600 text-sm'>{statistics.viewCount} views</li>
+                {
+                    statistics?.viewCount && <li className='text-gray-600 text-sm'>{statistics?.viewCount} views</li>
+                }
             </ul>
         </div>
     )

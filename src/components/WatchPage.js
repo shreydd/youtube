@@ -6,7 +6,7 @@ import { closeMenu } from '../utils/appSlice';
 const WatchPage = () => {
 
     const [searchParams] = useSearchParams();
-    console.log(searchParams.get("v"))
+    // console.log(searchParams.get("v"))
 
     const dispatch = useDispatch();
 
