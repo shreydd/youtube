@@ -26,7 +26,7 @@ const VideoContainer = () => {
                     ?
                     <p>loading</p>
                     :
-                    videos.map(video => {
+                    videos?.map(video => {
                         return (
                             <Link to={'/watch?v='+video.id} key={video.id} className='hover:shadow-lg'>
                                 <VideoCard info={video} />
