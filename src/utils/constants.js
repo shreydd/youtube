@@ -15,3 +15,77 @@ export const YOUTUBE_REMAINING_CONFIG="&key="+GOOGLE_API_KEY
 export const YOUTUBE_SEARCH_RESULTS_REMAINING_CONFIG="&key="+GOOGLE_API_KEY
 
 export const YOUTUBE_COMMENTS_API="https://www.googleapis.com/youtube/v3/commentThreads?textFormat=plainText&part=snippet,replies&maxResults=40&videoId="
+
+
+export const commentsData = [
+    {
+      name: "Akshay Saini",
+      text: "Lorem ipsum dolor sit amet, consectetur adip",
+      replies: [],
+    },
+    {
+      name: "Akshay Saini",
+      text: "Lorem ipsum dolor sit amet, consectetur adip",
+      replies: [
+        {
+          name: "Akshay Saini",
+          text: "Lorem ipsum dolor sit amet, consectetur adip",
+          replies: [],
+        },
+        {
+          name: "Akshay Saini",
+          text: "Lorem ipsum dolor sit amet, consectetur adip",
+          replies: [
+            {
+              name: "Akshay Saini",
+              text: "Lorem ipsum dolor sit amet, consectetur adip",
+              replies: [
+                {
+                  name: "Akshay Saini",
+                  text: "Lorem ipsum dolor sit amet, consectetur adip",
+                  replies: [
+                    {
+                      name: "Akshay Saini",
+                      text: "Lorem ipsum dolor sit amet, consectetur adip",
+                      replies: [
+                        {
+                          name: "Akshay Saini",
+                          text: "Lorem ipsum dolor sit amet, consectetur adip",
+                          replies: [],
+                        },
+                      ],
+                    },
+                    {
+                      name: "Akshay Saini",
+                      text: "Lorem ipsum dolor sit amet, consectetur adip",
+                      replies: [],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "Akshay Saini",
+      text: "Lorem ipsum dolor sit amet, consectetur adip",
+      replies: [],
+    },
+    {
+      name: "Akshay Saini",
+      text: "Lorem ipsum dolor sit amet, consectetur adip",
+      replies: [],
+    },
+    {
+      name: "Akshay Saini",
+      text: "Lorem ipsum dolor sit amet, consectetur adip",
+      replies: [],
+    },
+    {
+      name: "Akshay Saini",
+      text: "Lorem ipsum dolor sit amet, consectetur adip",
+      replies: [],
+    },
+  ];
