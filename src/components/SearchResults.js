@@ -12,7 +12,7 @@ const SearchResults = () => {
 
     useEffect(() => {
         getSearchResults()
-    }, [])
+    }, [searchParams])
 
     const getSearchResults = async () => {
         const data = await fetch(YOUTUBE_SEARCH_RESULTS_KEYWORD + searchParams.get('search_query') + YOUTUBE_SEARCH_RESULTS_REMAINING_CONFIG)
