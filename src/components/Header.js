@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
 import { toggleMenu } from '../utils/appSlice';
-import { YOUTUBE_SEARCH_API } from '../utils/constants';
+import { YOUTUBE_SEARCH_API, YOUTUBE_SEARCH_RESULTS_REMAINING_CONFIG } from '../utils/constants';
 import { storeSuggestions } from '../utils/searchSlice';
 
 const Header = () => {
