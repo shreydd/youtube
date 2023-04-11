@@ -1,10 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import FilterButton from './FilterButton'
 
 const ButtonList = () => {
 
-
-    let list = ["IN", "US", "UK"];
+    let list = ["IN", "US"];
 
     return (
         <div className='px-5 flex items-center'>
@@ -12,8 +12,9 @@ const ButtonList = () => {
             {
                 list.map((item, index) => {
                     return (
-                        // TODO: working ocClick functionality
-                        <FilterButton name={item} key={index} />
+                        <Link to={"?r="+item}>
+                            <FilterButton name={item} key={index} />
+                        </Link>
                     )
                 })
             }
