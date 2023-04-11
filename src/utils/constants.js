@@ -17,6 +17,12 @@ export const YOUTUBE_SEARCH_RESULTS_REMAINING_CONFIG="&key="+GOOGLE_API_KEY
 export const YOUTUBE_COMMENTS_API="https://www.googleapis.com/youtube/v3/commentThreads?textFormat=plainText&part=snippet,replies&maxResults=40&videoId="
 
 
+export const LOFI_2021_VIDEO_ID="n61ULEU7CO0"
+
+export const MOCK_LIVE_CHAT_QUOTES_API="https://quotes-api-production-81c7.up.railway.app/quote"
+
+export const CHAT_MSGS_RESTRICT = 10;
+
 export const commentsData = [
     {
       name: "Akshay Saini",
