@@ -56,7 +56,7 @@ const Header = () => {
 
     return (
         <header className='grid grid-flow-col py-5 shadow-md'>
-            <div className='col-span-2 flex justify-start items-center pl-5'>
+            <div className='col-span-6 md:col-span-2 flex justify-start items-center pl-5'>
                 <img
                     onClick={() => toggleMenuHandler()}
                     className='h-7 cursor-pointer'
@@ -72,8 +72,8 @@ const Header = () => {
                 </a>
             </div>
 
-            <div className='col-span-8 px-10'>
-                <div className='flex'>
+            <div className='col-span-6 md:col-span-8 px-10'>
+                <div className='flex flex-1 flex-wrap'>
                     <input
                         type='text'
                         className='border border-gray-400 p-2 px-4 w-1/2 rounded-l-full items-center'
@@ -109,7 +109,7 @@ const Header = () => {
                     </ul>
                 </div>)}
             </div>
-
+{/* 
             <div className='col-span-2 flex justify-end items-center pr-5'>
                 <img
                     src='https://static.thenounproject.com/png/1743563-200.png'
@@ -117,6 +117,7 @@ const Header = () => {
                     alt='user'
                 />
             </div>
+             */}
         </header>
     )
 }
