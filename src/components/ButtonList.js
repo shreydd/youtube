@@ -4,7 +4,7 @@ import FilterButton from './FilterButton'
 
 const ButtonList = () => {
 
-    let list = ["IN", "US"];
+    let list = ["IN", "US", "NZ", "GB"];
 
     return (
         <div className='px-5 flex items-center'>
@@ -12,8 +12,8 @@ const ButtonList = () => {
             {
                 list.map((item, index) => {
                     return (
-                        <Link to={"?r="+item}>
-                            <FilterButton name={item} key={index} />
+                        <Link to={"?r="+item} key={index}>
+                            <FilterButton name={item}  />
                         </Link>
                     )
                 })

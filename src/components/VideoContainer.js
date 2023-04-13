@@ -33,7 +33,7 @@ const VideoContainer = () => {
                     :
                     videos?.map(video => {
                         return (
-                            <Link to={'/watch?v='+video.id} key={video.id} className='hover:shadow-lg'>
+                            <Link to={'/watch?v='+video.id} key={video.id} className=''>
                                 <VideoCard info={video} />
                             </Link>
                         )
