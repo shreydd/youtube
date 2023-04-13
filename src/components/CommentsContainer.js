@@ -18,7 +18,7 @@ const CommentsContainer = () => {
 
     useEffect(() => {
         getComments()
-    }, [])
+    }, [searchParams])
 
     return (
         <>
