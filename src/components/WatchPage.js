@@ -20,25 +20,19 @@ const WatchPage = () => {
                 <iframe
                     height='80%'
                     width='100%'
+                    id="yt-player"
+                    className='rounded-md'
                     src={"https://www.youtube.com/embed/" + searchParams.get("v")}
                     title="YouTube video player"
                     frameBorder="0"
+                    showinfo="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen>
                 </iframe>
 
-                <p className='text-gray-700 italic mt-10 mb-2'>Comments</p>
                 <CommentsContainer />
             </div>
-            {
-                searchParams.get("v") === LOFI_2021_VIDEO_ID
-                    ?
-                    // <div className='hidden lg:block'>
-                    <LiveChat />
-                    // </div>
-                    :
-                    <></>
-            }
+            <LiveChat />
         </>
     )
 }

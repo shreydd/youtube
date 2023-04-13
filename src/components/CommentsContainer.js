@@ -22,6 +22,7 @@ const CommentsContainer = () => {
 
     return (
         <>
+            <p className='font-bold text-sm border-b pb-4 text-gray-800 border-gray-400 mt-10 mb-4'> {videoComments?.length} · Top comments</p>
             <section className='grid grid-flow-row gap-5'>
                 {
                     videoComments?.length === 0
